@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+}
+
+header {
+    height: 100px;
+    display: grid;
+    place-content: center;
+    & h1 {
+        text-transform: uppercase;
+    }
+}
+
+main {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria {
+    width: 1280px;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "f1 f2 f2 f3" "f1 f4 f5 f3" "f1 f6 f7 f7" "f1 f8 f7 f7";
+    gap: 1px;
+    grid-template-rows: repeat(4, 300px);
+}
+
+.galeria .foto:nth-of-type(1) {
+    grid-area: f1;
+    background-color: purple;
+}
+
+.galeria .foto:nth-of-type(2) {
+    grid-area: f2;
+    background-color: greenyellow;
+}
+
+.galeria .foto:nth-of-type(3) {
+    grid-area: f3;
+    background-color: plum;
+}
+
+.galeria .foto:nth-of-type(4) {
+    grid-area: f4;
+    background-color: greenyellow;
+}
+
+.galeria .foto:nth-of-type(5) {
+    grid-area: f5;
+    background-color: greenyellow;
+}
+
+.galeria .foto:nth-of-type(6) {
+    grid-area: f6;
+    background-color: tomato;
+}
+
+.galeria .foto:nth-of-type(7) {
+    grid-area: f7;
+    background-color: tomato;
+}
+
+.galeria .foto:nth-of-type(8) {
+    grid-area: f8;
+    background-color: tomato;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    height: 50px;
+    display: grid;
+    place-content: center;
+    & p {
+        font-style: italic;
+    }
+}
